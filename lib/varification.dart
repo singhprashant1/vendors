@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendors/business.dart';
 import 'package:vendors/register.dart';
 
 class Varification extends StatefulWidget {
@@ -17,7 +18,7 @@ class _VarificationState extends State<Varification> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () => Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => SecondScreen())),
+              context, MaterialPageRoute(builder: (context) => Business())),
           color: Colors.black,
         ),
       ),
