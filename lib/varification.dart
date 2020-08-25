@@ -77,10 +77,8 @@ class _VarificationState extends State<Varification> {
                       style: TextStyle(color: Colors.white, fontSize: 20.0),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Varification()));
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Business()));
                     },
                     splashColor: Colors.redAccent,
                   ),

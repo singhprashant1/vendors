@@ -31,120 +31,119 @@ class _BusinessState extends State<Business> {
           color: Colors.black,
         ),
       ),
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 100.0),
-            child: Text(
-              "  Add Your Business",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
+      body: Form(
+        key: _formKey,
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "  Add Your Business",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Center(
+            Center(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 200.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    TextFormField(
-                      style: TextStyle(
-                        color: Colors.black,
+                padding: const EdgeInsets.all(20.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      TextFormField(
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        decoration: InputDecoration(
+                          labelText: 'Firm Name',
+                        ),
+                        keyboardType: TextInputType.name,
+                        onSaved: (input) {
+                          _name = input;
+                        },
                       ),
-                      decoration: InputDecoration(
-                        labelText: 'Firm Name',
+                      TextFormField(
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        decoration: InputDecoration(
+                          labelText: 'Address',
+                        ),
+                        keyboardType: TextInputType.text,
+                        onSaved: (input) {
+                          _add = input;
+                        },
                       ),
-                      keyboardType: TextInputType.name,
-                      onSaved: (input) {
-                        _name = input;
-                      },
-                    ),
-                    TextFormField(
-                      style: TextStyle(
-                        color: Colors.black,
+                      TextFormField(
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                        ),
+                        keyboardType: TextInputType.text,
+                        validator: validateEmail,
+                        onSaved: (input) {
+                          _email = input;
+                        },
                       ),
-                      decoration: InputDecoration(
-                        labelText: 'Address',
+                      TextFormField(
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        decoration: InputDecoration(
+                          labelText: 'Website',
+                        ),
+                        keyboardType: TextInputType.text,
+                        onSaved: (input) {
+                          _website = input;
+                        },
                       ),
-                      keyboardType: TextInputType.text,
-                      onSaved: (input) {
-                        _add = input;
-                      },
-                    ),
-                    TextFormField(
-                      style: TextStyle(
-                        color: Colors.black,
+                      TextFormField(
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                        decoration: InputDecoration(
+                          labelText: 'Additional Phone Number',
+                        ),
+                        keyboardType: TextInputType.number,
+                        onSaved: (input) {
+                          _number = input;
+                        },
                       ),
-                      decoration: InputDecoration(
-                        labelText: 'Email',
+                      SizedBox(
+                        height: 15,
                       ),
-                      keyboardType: TextInputType.text,
-                      validator: validateEmail,
-                      onSaved: (input) {
-                        _email = input;
-                      },
-                    ),
-                    TextFormField(
-                      style: TextStyle(
-                        color: Colors.black,
+                      MaterialButton(
+                        height: 50,
+                        minWidth: 200,
+                        color: Colors.orange[800],
+                        textColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        child: Text(
+                          "Proceed",
+                          style: TextStyle(color: Colors.white, fontSize: 20.0),
+                        ),
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Varification()));
+                        },
+                        splashColor: Colors.redAccent,
                       ),
-                      decoration: InputDecoration(
-                        labelText: 'Website',
-                      ),
-                      keyboardType: TextInputType.text,
-                      onSaved: (input) {
-                        _website = input;
-                      },
-                    ),
-                    TextFormField(
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                      decoration: InputDecoration(
-                        labelText: 'Additional Phone Number',
-                      ),
-                      keyboardType: TextInputType.number,
-                      onSaved: (input) {
-                        _number = input;
-                      },
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  MaterialButton(
-                    height: 50,
-                    minWidth: 200,
-                    color: Colors.orange[800],
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                    ),
-                    child: Text(
-                      "Proceed",
-                      style: TextStyle(color: Colors.white, fontSize: 20.0),
-                    ),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Varification()));
-                    },
-                    splashColor: Colors.redAccent,
-                  ),
-                ]),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }
