@@ -7,6 +7,15 @@ class Services extends StatefulWidget {
 }
 
 class _ServicesState extends State<Services> {
+  bool isButtonPressed = false;
+  bool isButtonPressed1 = false;
+  bool isButtonPressed2 = false;
+  bool isButtonPressed3 = false;
+  bool isButtonPressed4 = false;
+  bool isButtonPressed5 = false;
+  bool isButtonPressed6 = false;
+  bool isButtonPressed7 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,12 +54,18 @@ class _ServicesState extends State<Services> {
                       ),
                       Expanded(
                         child: RaisedButton(
-                          color: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                           child: Text("Salon"),
-                          onPressed: () => null,
+                          color: isButtonPressed
+                              ? Colors.orange[800]
+                              : Colors.white,
+                          onPressed: () {
+                            setState(() {
+                              isButtonPressed = !isButtonPressed;
+                            });
+                          },
                         ),
                       ),
                       SizedBox(
@@ -58,12 +73,18 @@ class _ServicesState extends State<Services> {
                       ),
                       Expanded(
                         child: RaisedButton(
-                          color: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                           child: Text("Gym"),
-                          onPressed: () => null,
+                          color: isButtonPressed1
+                              ? Colors.orange[800]
+                              : Colors.white,
+                          onPressed: () {
+                            setState(() {
+                              isButtonPressed1 = !isButtonPressed1;
+                            });
+                          },
                         ),
                       ),
                       SizedBox(
@@ -71,12 +92,18 @@ class _ServicesState extends State<Services> {
                       ),
                       Expanded(
                         child: RaisedButton(
-                          color: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                           child: Text("Clinic"),
-                          onPressed: () => null,
+                          color: isButtonPressed2
+                              ? Colors.orange[800]
+                              : Colors.white,
+                          onPressed: () {
+                            setState(() {
+                              isButtonPressed2 = !isButtonPressed2;
+                            });
+                          },
                         ),
                       ),
                       SizedBox(
@@ -84,12 +111,18 @@ class _ServicesState extends State<Services> {
                       ),
                       Expanded(
                         child: RaisedButton(
-                          color: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                           child: Text("Retails"),
-                          onPressed: () => null,
+                          color: isButtonPressed3
+                              ? Colors.orange[800]
+                              : Colors.white,
+                          onPressed: () {
+                            setState(() {
+                              isButtonPressed3 = !isButtonPressed3;
+                            });
+                          },
                         ),
                       ),
                       SizedBox(
@@ -106,12 +139,18 @@ class _ServicesState extends State<Services> {
                           ),
                           Expanded(
                             child: RaisedButton(
-                              color: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                               ),
                               child: Text("Banks"),
-                              onPressed: () => null,
+                              color: isButtonPressed4
+                                  ? Colors.orange[800]
+                                  : Colors.white,
+                              onPressed: () {
+                                setState(() {
+                                  isButtonPressed4 = !isButtonPressed4;
+                                });
+                              },
                             ),
                           ),
                           SizedBox(
@@ -119,7 +158,6 @@ class _ServicesState extends State<Services> {
                           ),
                           Expanded(
                             child: RaisedButton(
-                              color: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                               ),
@@ -127,7 +165,14 @@ class _ServicesState extends State<Services> {
                                 "Restaurant",
                                 style: TextStyle(fontSize: 10),
                               ),
-                              onPressed: () => null,
+                              color: isButtonPressed5
+                                  ? Colors.orange[800]
+                                  : Colors.white,
+                              onPressed: () {
+                                setState(() {
+                                  isButtonPressed5 = !isButtonPressed5;
+                                });
+                              },
                             ),
                           ),
                           SizedBox(
@@ -135,12 +180,18 @@ class _ServicesState extends State<Services> {
                           ),
                           Expanded(
                             child: RaisedButton(
-                              color: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                               ),
                               child: Text("Shops"),
-                              onPressed: () => null,
+                              color: isButtonPressed6
+                                  ? Colors.orange[800]
+                                  : Colors.white,
+                              onPressed: () {
+                                setState(() {
+                                  isButtonPressed6 = !isButtonPressed6;
+                                });
+                              },
                             ),
                           ),
                           SizedBox(
@@ -148,12 +199,18 @@ class _ServicesState extends State<Services> {
                           ),
                           Expanded(
                             child: RaisedButton(
-                              color: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                               ),
                               child: Text("Others"),
-                              onPressed: () => null,
+                              color: isButtonPressed7
+                                  ? Colors.orange[800]
+                                  : Colors.white,
+                              onPressed: () {
+                                setState(() {
+                                  isButtonPressed7 = !isButtonPressed7;
+                                });
+                              },
                             ),
                           ),
                           SizedBox(
