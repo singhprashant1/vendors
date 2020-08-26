@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendors/services.dart';
 import 'package:vendors/varification.dart';
 
 class Business extends StatefulWidget {
@@ -27,7 +28,7 @@ class _BusinessState extends State<Business> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () => Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => Business())),
+              context, MaterialPageRoute(builder: (context) => Varification())),
           color: Colors.black,
         ),
       ),
@@ -133,7 +134,7 @@ class _BusinessState extends State<Business> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Varification()));
+                                  builder: (context) => Services()));
                         },
                         splashColor: Colors.redAccent,
                       ),

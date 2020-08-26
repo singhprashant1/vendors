@@ -24,91 +24,80 @@ class _ServicesState extends State<Services> {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "  Services",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 400),
-                child: SingleChildScrollView(
-                  child: Column(
+            SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  Row(
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                              ),
-                              child: Text("Salon"),
-                              onPressed: () => null,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                              ),
-                              child: Text("Gym"),
-                              onPressed: () => null,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                              ),
-                              child: Text("Clinic"),
-                              onPressed: () => null,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                              ),
-                              child: Text("Retails"),
-                              onPressed: () => null,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                        ],
-                      )
+                      Text(
+                        "  Services",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
-                ),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 300),
-                child: SingleChildScrollView(
-                  child: Column(
+                  Row(
+                    children: <Widget>[
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: RaisedButton(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                          ),
+                          child: Text("Salon"),
+                          onPressed: () => null,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: RaisedButton(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                          ),
+                          child: Text("Gym"),
+                          onPressed: () => null,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: RaisedButton(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                          ),
+                          child: Text("Clinic"),
+                          onPressed: () => null,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Expanded(
+                        child: RaisedButton(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                          ),
+                          child: Text("Retails"),
+                          onPressed: () => null,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  ),
+                  Column(
                     children: <Widget>[
                       Row(
                         children: <Widget>[
@@ -174,14 +163,10 @@ class _ServicesState extends State<Services> {
                       ),
                     ],
                   ),
-                ),
-              ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 210),
-                child: SingleChildScrollView(
-                  child: Column(
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Column(
                     children: <Widget>[
                       Row(
                         children: <Widget>[
@@ -196,9 +181,207 @@ class _ServicesState extends State<Services> {
                       ),
                     ],
                   ),
-                ),
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            "  Lorem ispum",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 150,
+                          ),
+                          RaisedButton(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                                side: BorderSide(
+                                  color: Colors.orange[800],
+                                )),
+                            child: Text("Select"),
+                            onPressed: () => null,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "  Lorem ispum",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 150,
+                              ),
+                              RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                      color: Colors.orange[800],
+                                    )),
+                                child: Text("Select"),
+                                onPressed: () => null,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "  Lorem ispum",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 150,
+                              ),
+                              RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                      color: Colors.orange[800],
+                                    )),
+                                child: Text("Select"),
+                                onPressed: () => null,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "  Lorem ispum",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 150,
+                              ),
+                              RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                      color: Colors.orange[800],
+                                    )),
+                                child: Text("Select"),
+                                onPressed: () => null,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "  Lorem ispum",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 150,
+                              ),
+                              RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                      color: Colors.orange[800],
+                                    )),
+                                child: Text("Select"),
+                                onPressed: () => null,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "  Lorem ispum",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 150,
+                              ),
+                              RaisedButton(
+                                color: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                    side: BorderSide(
+                                      color: Colors.orange,
+                                    )),
+                                child: Text("Select"),
+                                onPressed: () => null,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Center(
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              MaterialButton(
+                                height: 50,
+                                minWidth: 180,
+                                color: Colors.orange[800],
+                                textColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                ),
+                                child: Text(
+                                  "Verify",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20.0),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Business()));
+                                },
+                                splashColor: Colors.redAccent,
+                              ),
+                            ]),
+                      )
+                    ],
+                  ),
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),
