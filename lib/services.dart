@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vendors/business.dart';
+import 'package:vendors/image.dart';
 
 class Services extends StatefulWidget {
   @override
@@ -395,7 +396,7 @@ class _ServicesState extends State<Services> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(18.0),
                                     side: BorderSide(
-                                      color: Colors.orange,
+                                      color: Colors.orange[800],
                                     )),
                                 child: Text("Select"),
                                 onPressed: () => null,
@@ -428,7 +429,7 @@ class _ServicesState extends State<Services> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => Business()));
+                                          builder: (context) => RegImage()));
                                 },
                                 splashColor: Colors.redAccent,
                               ),

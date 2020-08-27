@@ -9,3 +9,13 @@ class BgImage extends StatelessWidget {
     );
   }
 }
+
+class RegImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      "ASSETS/donespl.jpg",
+      fit: BoxFit.cover,
+    );
+  }
+}

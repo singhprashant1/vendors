@@ -1,43 +1,39 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:vendors/image.dart';
+import 'package:vendors/manage.dart';
+
 import 'package:vendors/register.dart';
+import 'dart:async';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Vendor',
-      home: MyHomePage(),
-      debugShowCheckedModeBanner: false,
+      home: DoneSpl(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class DoneSpl extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _DoneSplState createState() => _DoneSplState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _DoneSplState extends State<DoneSpl> {
   @override
   void initState() {
     super.initState();
     Timer(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SecondScreen())));
+            context, MaterialPageRoute(builder: (context) => ManageQueue())));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(fit: StackFit.expand, children: <Widget>[
-      BgImage(),
+      RegImage(),
     ]));
   }
 }

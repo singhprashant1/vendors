@@ -48,6 +48,7 @@ flutter:
   assets:
     - ASSETS/splash.jpg
     - ASSETS/logo.jpg
+    - ASSETS/donespl.jpg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
