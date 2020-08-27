@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vendors/image.dart';
-import 'package:vendors/manage.dart';
-
-import 'package:vendors/register.dart';
+import 'package:vendors/salon/manage.dart';
 import 'dart:async';
-
-class Splash extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DoneSpl(),
-    );
-  }
-}
 
 class DoneSpl extends StatefulWidget {
   @override

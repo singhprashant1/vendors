@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vendors/business.dart';
 import 'package:vendors/image.dart';
+import 'package:vendors/regdone.dart';
 
 class Services extends StatefulWidget {
   @override
@@ -429,7 +430,7 @@ class _ServicesState extends State<Services> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => RegImage()));
+                                          builder: (context) => DoneSpl()));
                                 },
                                 splashColor: Colors.redAccent,
                               ),
