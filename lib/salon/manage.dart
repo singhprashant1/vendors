@@ -191,8 +191,13 @@ class _ManageQueueState extends State<ManageQueue> {
                     children: <Widget>[
                       TableCalendar(
                         initialCalendarFormat: CalendarFormat.week,
+                        daysOfWeekStyle: DaysOfWeekStyle(
+                          weekendStyle:
+                              TextStyle().copyWith(color: Colors.black),
+                        ),
                         calendarStyle: CalendarStyle(
                           todayColor: Colors.purple,
+                          weekendStyle: TextStyle(color: Colors.black),
                           selectedColor: Colors.orange[800],
                         ),
                         calendarController: _controller,
@@ -215,9 +220,15 @@ class _ManageQueueState extends State<ManageQueue> {
                     ],
                   ),
                   SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
                     child: Column(
                       children: [hourMinute12H()],
                     ),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                   Column(
                     children: <Widget>[
@@ -229,7 +240,7 @@ class _ManageQueueState extends State<ManageQueue> {
                           value: true,
                           textOn: 'Offline',
                           textOff: 'Go LIVE',
-                          colorOn: Colors.redAccent[700],
+                          colorOn: Colors.black,
                           colorOff: Colors.orange[800],
                           iconOn: Icons.remove_circle_outline,
                           iconOff: Icons.done,
