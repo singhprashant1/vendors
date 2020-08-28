@@ -422,7 +422,7 @@ class _ServicesState extends State<Services> {
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
                                 child: Text(
-                                  "Verify",
+                                  "Submit",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20.0),
                                 ),

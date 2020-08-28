@@ -13,26 +13,24 @@ class _SecondScreenState extends State<SecondScreen> {
     return Scaffold(
       body: Form(
         child: Stack(fit: StackFit.expand, children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(bottom: 400.0),
-            child: Center(
-              child: ClipRRect(
-                borderRadius: new BorderRadius.circular(10.0),
-                child: Image(
-                  fit: BoxFit.fill,
-                  image: AssetImage('ASSETS/logo.jpg'),
-                  width: 100.0,
-                  height: 100.0,
-                ),
-              ),
-            ),
-          ),
           Center(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  ClipRRect(
+                    borderRadius: new BorderRadius.circular(10.0),
+                    child: Image(
+                      fit: BoxFit.fill,
+                      image: AssetImage('ASSETS/logo.jpg'),
+                      width: 80.0,
+                      height: 80.0,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
                   TextFormField(
                     style: TextStyle(
                       color: Colors.black,
