@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:vendors/salon/token.dart';
 import 'package:vendors/services.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
@@ -11,6 +12,7 @@ class ManageQueue extends StatefulWidget {
 
 class _ManageQueueState extends State<ManageQueue> {
   DateTime _dateTime = DateTime.now();
+  String _token;
 
   CalendarController _controller;
   @override
@@ -46,8 +48,8 @@ class _ManageQueueState extends State<ManageQueue> {
                 ListTile(
                   title: Text("Profile Settings"),
                   onTap: () {
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => null));
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Token()));
                   },
                 ),
                 ListTile(
@@ -115,31 +117,31 @@ class _ManageQueueState extends State<ManageQueue> {
                         "username",
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 22,
+                          fontSize: 20.5,
                         ),
                         textAlign: TextAlign.center,
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   Column(
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(right: 70),
+                        padding: const EdgeInsets.only(right: 85),
                         child: Text(
                           "Manage Your Queue",
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 25,
+                              fontSize: 23.5,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   Column(
                     children: <Widget>[
@@ -152,17 +154,22 @@ class _ManageQueueState extends State<ManageQueue> {
                             "Total tokens :",
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 20,
+                              fontSize: 18.5,
                             ),
                           ),
                           SizedBox(
                             width: 90,
                           ),
-                          Text(
-                            "50",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 20,
+                          Container(
+                            height: 50,
+                            width: 50,
+                            child: TextFormField(
+                              textAlign: TextAlign.center,
+                              decoration: const InputDecoration(),
+                              keyboardType: TextInputType.number,
+                              onSaved: (String val) {
+                                _token = val;
+                              },
                             ),
                           ),
                         ],
@@ -170,17 +177,17 @@ class _ManageQueueState extends State<ManageQueue> {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   Column(
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.only(right: 200),
+                        padding: const EdgeInsets.only(right: 210),
                         child: Text(
                           "Select day",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 18.5,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -212,7 +219,7 @@ class _ManageQueueState extends State<ManageQueue> {
                           "Select time",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 18.5,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -244,8 +251,7 @@ class _ManageQueueState extends State<ManageQueue> {
                           colorOff: Colors.orange[800],
                           iconOn: Icons.remove_circle_outline,
                           iconOff: Icons.done,
-                          textSize: 16.0,
-
+                          textSize: 14.5,
                           onChanged: (bool state) {
                             //Use it to manage the different states
                             print('Current State of SWITCH IS: $state');
@@ -266,8 +272,8 @@ class _ManageQueueState extends State<ManageQueue> {
   Widget hourMinute12H() {
     return new TimePickerSpinner(
       is24HourMode: false,
-      normalTextStyle: TextStyle(fontSize: 12),
-      highlightedTextStyle: TextStyle(fontSize: 20),
+      normalTextStyle: TextStyle(fontSize: 10.5),
+      highlightedTextStyle: TextStyle(fontSize: 18.5),
       itemHeight: 28,
       itemWidth: 60,
       onTimeChange: (time) {

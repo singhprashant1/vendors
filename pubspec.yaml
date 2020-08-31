@@ -31,6 +31,7 @@ dependencies:
   table_calendar: ^2.2.3
   flutter_time_picker_spinner: ^1.0.6+1
   lite_rolling_switch: ^0.1.1
+  custom_switch: ^0.0.1
 
 
 
