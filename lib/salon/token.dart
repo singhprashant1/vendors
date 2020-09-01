@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendors/salon/booking.dart';
 import 'package:vendors/salon/manage.dart';
 import 'package:custom_switch/custom_switch.dart';
 
@@ -46,8 +47,8 @@ class _TokenState extends State<Token> {
                 ListTile(
                   title: Text("Manage Queue"),
                   onTap: () {
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => null));
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Booking()));
                   },
                 ),
                 ListTile(
