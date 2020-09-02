@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dash/flutter_dash.dart';
 import 'package:vendors/salon/booking.dart';
 import 'package:vendors/salon/manage.dart';
 import 'package:custom_switch/custom_switch.dart';
 import 'package:vendors/salon/newbooking.dart';
+import 'package:dotted_line/dotted_line.dart';
+import 'package:dash/dash.dart';
 
 class Token extends StatefulWidget {
   @override
@@ -98,7 +101,12 @@ class _TokenState extends State<Token> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           SizedBox(
-                            height: 50,
+                            height: 40,
+                          ),
+                          CustomPaint(
+                            //                       <-- CustomPaint widget
+
+                            painter: MyPainter(),
                           ),
                           Text("Tokens No : Abcd123",
                               style:
@@ -279,5 +287,27 @@ class _TokenState extends State<Token> {
         ),
       ),
     );
+  }
+}
+
+class MyPainter extends CustomPainter {
+  //         <-- CustomPainter class
+  @override
+  void paint(Canvas canvas, Size size) {
+    final left = -120.0;
+    final top = 100.0;
+    final right = 120.0;
+    final bottom = -20.0;
+    final rect = Rect.fromLTRB(left, top, right, bottom);
+    final paint = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2;
+    canvas.drawRect(rect, paint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter old) {
+    return false;
   }
 }

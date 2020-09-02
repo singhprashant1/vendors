@@ -255,10 +255,10 @@ class _ManageQueueState extends State<ManageQueue> {
                           onChanged: (bool state) {
                             //Use it to manage the different states
                             print('Current State of SWITCH IS: $state');
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Token()));
+                            // Navigator.pushReplacement(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => Token()));
                           },
                         ),
                       ),
