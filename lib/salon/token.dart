@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vendors/salon/booking.dart';
 import 'package:vendors/salon/manage.dart';
 import 'package:custom_switch/custom_switch.dart';
+import 'package:vendors/salon/newbooking.dart';
 
 class Token extends StatefulWidget {
   @override
@@ -85,45 +86,48 @@ class _TokenState extends State<Token> {
               padding: const EdgeInsets.only(top: 50),
               child: SingleChildScrollView(
                 child: Container(
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    color: Colors.orange[700],
-                    elevation: 10,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        SizedBox(
-                          height: 50,
-                        ),
-                        Text("Tokens No : Abcd123",
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.white)),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Customer Name : Abcd",
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.white)),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text("Contact No : 098765421",
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.white)),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text("Current Token",
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold)),
-                        SizedBox(
-                          height: 5,
-                        )
-                      ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      color: Colors.orange[800],
+                      elevation: 10,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 50,
+                          ),
+                          Text("Tokens No : Abcd123",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text("Customer Name : Abcd",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text("Contact No : 098765421",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Text("Current Token",
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold)),
+                          SizedBox(
+                            height: 5,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -146,7 +150,10 @@ class _TokenState extends State<Token> {
                               color: Colors.orange[800],
                             ),
                           ),
-                          child: Text("Salon"),
+                          child: Text(
+                            "Done",
+                            style: TextStyle(color: Colors.orange),
+                          ),
                           color: isButtonPressed
                               ? Colors.orange[800]
                               : Colors.white,
@@ -168,7 +175,10 @@ class _TokenState extends State<Token> {
                               color: Colors.orange[800],
                             ),
                           ),
-                          child: Text("Salon"),
+                          child: Text(
+                            "Cancel",
+                            style: TextStyle(color: Colors.orange),
+                          ),
                           color: isButtonPressed1
                               ? Colors.orange[800]
                               : Colors.white,
@@ -190,7 +200,10 @@ class _TokenState extends State<Token> {
                               color: Colors.orange[800],
                             ),
                           ),
-                          child: Text("Salon"),
+                          child: Text(
+                            "Next",
+                            style: TextStyle(color: Colors.orange),
+                          ),
                           color: isButtonPressed2
                               ? Colors.orange[800]
                               : Colors.white,
@@ -251,6 +264,10 @@ class _TokenState extends State<Token> {
                           setState(() {
                             status = value;
                           });
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Booking()));
                         },
                       ),
                     ],

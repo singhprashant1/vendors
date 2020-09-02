@@ -1,5 +1,6 @@
 import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
+import 'package:vendors/salon/newbooking.dart';
 import 'package:vendors/salon/token.dart';
 
 class Booking extends StatefulWidget {
@@ -109,13 +110,17 @@ class _BookingState extends State<Booking> {
                         width: 50,
                       ),
                       CustomSwitch(
-                        activeColor: Colors.orange[700],
+                        activeColor: Colors.orange[800],
                         value: status,
                         onChanged: (value) {
                           print("VALUE : $value");
                           setState(() {
                             status = value;
                           });
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewBooking()));
                         },
                       ),
                     ],
