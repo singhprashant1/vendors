@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:vendors/appbar/appbar.dart';
 import 'package:vendors/salon/token.dart';
 import 'package:vendors/services.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
@@ -34,56 +35,20 @@ class _ManageQueueState extends State<ManageQueue> {
               context, MaterialPageRoute(builder: (context) => Services())),
           color: Colors.black,
         ),
-      ),
-      endDrawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                UserAccountsDrawerHeader(
-                  accountName: Text("User name"),
-                  accountEmail: Text("User email"),
-                  currentAccountPicture: CircleAvatar(),
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => Appbar()));
+                },
+                child: Icon(
+                  Icons.menu,
+                  size: 26.0,
                 ),
-                ListTile(
-                  title: Text("Profile Settings"),
-                  onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Token()));
-                  },
-                ),
-                ListTile(
-                  title: Text("Manage Queue"),
-                  onTap: () {
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => null));
-                  },
-                ),
-                ListTile(
-                  title: Text("Customer Data"),
-                  onTap: () {
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => null));
-                  },
-                ),
-                ListTile(
-                  title: Text("View Your Ratings"),
-                  onTap: () {
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => null));
-                  },
-                ),
-                ListTile(
-                  title: Text("Notifications"),
-                  onTap: () {
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => null));
-                  },
-                ),
-              ],
-            )
-          ],
-        ),
+              )),
+        ],
       ),
       body: Form(
         child: Stack(
