@@ -86,7 +86,8 @@ class _AppbarState extends State<Appbar> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your onPressed code here!
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => ManageQueue()));
         },
         child: Icon(
           Icons.clear,
