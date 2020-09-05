@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vendors/salon/booking.dart';
 import 'package:vendors/salon/manage.dart';
+import 'package:vendors/salon/token.dart';
 
 class Appbar extends StatefulWidget {
   @override
@@ -31,7 +33,10 @@ class _AppbarState extends State<Appbar> {
                 child: Column(
                   children: [
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => Token()));
+                      },
                       child: Text(
                         "Profile Settings",
                         style: TextStyle(fontSize: 23),
