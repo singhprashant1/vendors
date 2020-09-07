@@ -57,20 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.1"
-  dash:
-    dependency: "direct main"
-    description:
-      name: dash
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.5.7"
-  dotted_line:
-    dependency: "direct main"
-    description:
-      name: dotted_line
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -78,25 +64,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0-nullsafety"
-  fdottedline:
-    dependency: "direct main"
-    description:
-      name: fdottedline
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_dash:
-    dependency: "direct main"
-    description:
-      name: flutter_dash
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter

@@ -48,8 +48,8 @@ class _VarificationState extends State<Varification> {
                         color: Colors.black,
                       ),
                       decoration: InputDecoration(
-                        labelText: 'Enter Your Verification Code',
-                      ),
+                          labelText: 'Enter Your Verification Code',
+                          labelStyle: TextStyle(color: Colors.black)),
                       keyboardType: TextInputType.number,
                       onSaved: (input) {
                         _otp = input;

@@ -36,8 +36,8 @@ class _SecondScreenState extends State<SecondScreen> {
                       color: Colors.black,
                     ),
                     decoration: InputDecoration(
-                      labelText: 'Registered Firm Name',
-                    ),
+                        labelText: 'Registered Firm Name',
+                        labelStyle: TextStyle(color: Colors.black)),
                     keyboardType: TextInputType.text,
                     onSaved: (input) {
                       _firm = input;
@@ -51,8 +51,8 @@ class _SecondScreenState extends State<SecondScreen> {
                       color: Colors.black,
                     ),
                     decoration: InputDecoration(
-                      labelText: "Owner's Name",
-                    ),
+                        labelText: "Owner's Name",
+                        labelStyle: TextStyle(color: Colors.black)),
                     keyboardType: TextInputType.text,
                     onSaved: (input) {
                       _name = input;
@@ -66,8 +66,8 @@ class _SecondScreenState extends State<SecondScreen> {
                       color: Colors.black,
                     ),
                     decoration: InputDecoration(
-                      labelText: 'Contact No.',
-                    ),
+                        labelText: 'Contact No.',
+                        labelStyle: TextStyle(color: Colors.black)),
                     keyboardType: TextInputType.number,
                     onSaved: (input) {
                       _number = input;

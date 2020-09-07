@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vendors/salon/Managequeue.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -133,7 +134,10 @@ class _ProfileState extends State<Profile> {
                         "Save",
                         style: TextStyle(color: Colors.white, fontSize: 20.0),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => Manage()));
+                      },
                       splashColor: Colors.redAccent,
                     ),
                   ],

@@ -59,8 +59,8 @@ class _BusinessState extends State<Business> {
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          labelText: 'Firm Name',
-                        ),
+                            labelText: 'Firm Name',
+                            labelStyle: TextStyle(color: Colors.black)),
                         keyboardType: TextInputType.name,
                         onSaved: (input) {
                           _name = input;
@@ -71,8 +71,8 @@ class _BusinessState extends State<Business> {
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          labelText: 'Address',
-                        ),
+                            labelText: 'Address',
+                            labelStyle: TextStyle(color: Colors.black)),
                         keyboardType: TextInputType.text,
                         onSaved: (input) {
                           _add = input;
@@ -83,8 +83,8 @@ class _BusinessState extends State<Business> {
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          labelText: 'Email',
-                        ),
+                            labelText: 'Email',
+                            labelStyle: TextStyle(color: Colors.black)),
                         keyboardType: TextInputType.text,
                         validator: validateEmail,
                         onSaved: (input) {
@@ -96,8 +96,8 @@ class _BusinessState extends State<Business> {
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          labelText: 'Website',
-                        ),
+                            labelText: 'Website',
+                            labelStyle: TextStyle(color: Colors.black)),
                         keyboardType: TextInputType.text,
                         onSaved: (input) {
                           _website = input;
@@ -108,8 +108,8 @@ class _BusinessState extends State<Business> {
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          labelText: 'Additional Phone Number',
-                        ),
+                            labelText: 'Additional Phone Number',
+                            labelStyle: TextStyle(color: Colors.black)),
                         keyboardType: TextInputType.number,
                         onSaved: (input) {
                           _number = input;
