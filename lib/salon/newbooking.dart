@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vendors/salon/booking.dart';
+import 'package:vendors/salon/profile.dart';
 
 class NewBooking extends StatefulWidget {
   @override
@@ -94,6 +95,10 @@ class _NewBookingState extends State<NewBooking> {
                             setState(() {
                               isButtonPressed = !isButtonPressed;
                             });
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Profile()));
                           },
                         ),
                       ),

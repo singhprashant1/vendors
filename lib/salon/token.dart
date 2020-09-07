@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dash/flutter_dash.dart';
-import 'package:vendors/appbar/appbar.dart';
 import 'package:vendors/salon/booking.dart';
 import 'package:vendors/salon/manage.dart';
 import 'package:custom_switch/custom_switch.dart';
-import 'package:vendors/salon/newbooking.dart';
-import 'package:dotted_line/dotted_line.dart';
-import 'package:dash/dash.dart';
 
 class Token extends StatefulWidget {
   @override
@@ -33,69 +28,20 @@ class _TokenState extends State<Token> {
         ),
         actions: <Widget>[
           Padding(
-              padding: EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => Appbar1()));
-                },
-                child: Icon(
-                  Icons.menu,
-                  size: 26.0,
-                ),
-              )),
+            padding: EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Appbar1()));
+              },
+              child: Icon(
+                Icons.menu,
+                size: 26.0,
+              ),
+            ),
+          ),
         ],
       ),
-      // endDrawer: Drawer(
-      //   child: ListView(
-      //     children: <Widget>[
-      //       Column(
-      //         children: <Widget>[
-      //           UserAccountsDrawerHeader(
-      //             accountName: Text("User name"),
-      //             accountEmail: Text("User email"),
-      //             currentAccountPicture: CircleAvatar(),
-      //           ),
-      //           ListTile(
-      //             title: Text("Profile Settings"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("Manage Queue"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(context,
-      //                   MaterialPageRoute(builder: (context) => Booking()));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("Customer Data"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("View Your Ratings"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("Notifications"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //         ],
-      //       )
-      //     ],
-      //   ),
-      // ),
       body: Form(
         child: Stack(
           fit: StackFit.expand,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vendors/business.dart';
-import 'package:vendors/image.dart';
 import 'package:vendors/regdone.dart';
 
 class Services extends StatefulWidget {

@@ -38,56 +38,6 @@ class _BookingState extends State<Booking> {
               )),
         ],
       ),
-      // endDrawer: Drawer(
-      //   child: ListView(
-      //     children: <Widget>[
-      //       Column(
-      //         children: <Widget>[
-      //           UserAccountsDrawerHeader(
-      //             accountName: Text("User name"),
-      //             accountEmail: Text("User email"),
-      //             currentAccountPicture: CircleAvatar(),
-      //           ),
-      //           ListTile(
-      //             title: Text("Profile Settings"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("Manage Queue"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("Customer Data"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("View Your Ratings"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //           ListTile(
-      //             title: Text("Notifications"),
-      //             onTap: () {
-      //               Navigator.pushReplacement(
-      //                   context, MaterialPageRoute(builder: (context) => null));
-      //             },
-      //           ),
-      //         ],
-      //       )
-      //     ],
-      //   ),
-      // ),
       body: Form(
         child: Stack(
           fit: StackFit.expand,
