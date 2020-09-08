@@ -2,8 +2,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:vendors/image.dart';
 import 'package:vendors/register.dart';
+import 'package:syncfusion_flutter_core/core.dart';
 
 void main() {
+  SyncfusionLicense.registerLicense(
+      "NT8mJyc2IWhia31hfWN9Z2doYmN8a3xhY2Fjc2tpYWNpZ2JzEh5oIyBqamZlZWZiEzQ+Mjo/fTA8Pg==");
   runApp(MyApp());
 }
 

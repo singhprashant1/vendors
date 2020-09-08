@@ -32,6 +32,9 @@ dependencies:
   flutter_time_picker_spinner: ^1.0.6+1
   lite_rolling_switch: ^0.1.1
   custom_switch: ^0.0.1
+  syncfusion_flutter_sliders: ^18.2.56-beta
+  intl: ^0.16.1
+  flutter_range_slider: ^1.4.0
 
 
 
