@@ -136,7 +136,6 @@ class _BusinessState extends State<Business> {
                               MaterialPageRoute(
                                   builder: (context) => Services()));
                         },
-                        splashColor: Colors.redAccent,
                       ),
                     ],
                   ),

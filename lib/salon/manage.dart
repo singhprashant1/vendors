@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:vendors/salon/rating.dart';
 import 'package:vendors/salon/token.dart';
 import 'package:vendors/services.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
@@ -316,7 +317,12 @@ class _AppbarState extends State<Appbar> {
                       height: 5,
                     ),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => YourRating()));
+                      },
                       child: Text(
                         "View Your Ratings",
                         style: TextStyle(fontSize: 23),

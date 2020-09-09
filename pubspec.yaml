@@ -35,6 +35,7 @@ dependencies:
   syncfusion_flutter_sliders: ^18.2.56-beta
   intl: ^0.16.1
   flutter_range_slider: ^1.4.0
+  flutter_rating_bar: ^3.0.1+1
 
 
 

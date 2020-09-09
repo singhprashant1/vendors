@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:intl/intl.dart';
+import 'package:vendors/salon/Customer.dart';
 
 class Manage extends StatefulWidget {
   @override
@@ -40,7 +41,7 @@ class _ManageState extends State<Manage> {
                       "Manage Queue                       ",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 25,
+                          fontSize: 28,
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
@@ -58,7 +59,7 @@ class _ManageState extends State<Manage> {
                       ],
                     ),
                     SfRangeSlider(
-                      min: DateTime(2010, 01, 01, 0, 00, 00),
+                      min: DateTime(2010, 01, 01, 6, 00, 00),
                       max: DateTime(2010, 01, 01, 24, 00, 00),
                       values: _values,
                       interval: 3,
@@ -77,7 +78,7 @@ class _ManageState extends State<Manage> {
                       },
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 20,
                     ),
                     Row(children: <Widget>[
                       Text(
@@ -88,8 +89,32 @@ class _ManageState extends State<Manage> {
                         ),
                       ),
                     ]),
+                    TextFormField(
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                      decoration: InputDecoration(
+                        labelText: 'Enter number',
+                        labelStyle: TextStyle(color: Colors.black),
+                      ),
+                      keyboardType: TextInputType.number,
+                      onSaved: (input) {
+                        _number = input;
+                      },
+                    ),
                     SizedBox(
-                      height: 40,
+                      height: 30,
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Text(
+                          "Tokens To Be Booked Before Salon Opens",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ],
                     ),
                     TextFormField(
                       style: TextStyle(
@@ -104,26 +129,26 @@ class _ManageState extends State<Manage> {
                         _number = input;
                       },
                     ),
-                    Row(children: <Widget>[
-                      Text(
-                        "Daily token limt",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 15,
-                        ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    MaterialButton(
+                      height: 50,
+                      minWidth: 200,
+                      color: Colors.orange[800],
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
                       ),
-                    ]),
-                    TextFormField(
-                      style: TextStyle(
-                        color: Colors.black,
+                      child: Text(
+                        "Save",
+                        style: TextStyle(color: Colors.white, fontSize: 20.0),
                       ),
-                      decoration: InputDecoration(
-                        labelText: 'Enter number',
-                        labelStyle: TextStyle(color: Colors.black),
-                      ),
-                      keyboardType: TextInputType.number,
-                      onSaved: (input) {
-                        _number = input;
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CustomerData()));
                       },
                     ),
                   ],
