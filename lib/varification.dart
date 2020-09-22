@@ -1,14 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vendors/business.dart';
 import 'package:vendors/register.dart';
 
 class Varification extends StatefulWidget {
+  String number;
+  Varification({this.number});
   @override
-  _VarificationState createState() => _VarificationState();
+  _VarificationState createState() => _VarificationState(number);
 }
 
 class _VarificationState extends State<Varification> {
-  String _otp;
+  String _otp, number;
+  _VarificationState(this.number);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,6 +82,7 @@ class _VarificationState extends State<Varification> {
                       style: TextStyle(color: Colors.white, fontSize: 20.0),
                     ),
                     onPressed: () {
+                      
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) => Business()));
                     },

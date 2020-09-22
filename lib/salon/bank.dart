@@ -2,24 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:vendors/business.dart';
 import 'package:vendors/regdone.dart';
 import 'package:vendors/salon/Retails.dart';
-import 'package:vendors/salon/bank.dart';
 import 'package:vendors/salon/clinic.dart';
 import 'package:vendors/salon/gymlist.dart';
 import 'package:vendors/salon/other.dart';
 import 'package:vendors/salon/restaurants.dart';
 import 'package:vendors/salon/shop.dart';
+import 'package:vendors/services.dart';
 
-class Services extends StatefulWidget {
+class Bank extends StatefulWidget {
   @override
-  _ServicesState createState() => _ServicesState();
+  _BankState createState() => _BankState();
 }
 
-class _ServicesState extends State<Services> {
-  bool isButtonPressed = true;
+class _BankState extends State<Bank> {
+  bool isButtonPressed = false;
   bool isButtonPressed1 = false;
   bool isButtonPressed2 = false;
   bool isButtonPressed3 = false;
-  bool isButtonPressed4 = false;
+  bool isButtonPressed4 = true;
   bool isButtonPressed5 = false;
   bool isButtonPressed6 = false;
   bool isButtonPressed7 = false;
@@ -172,10 +172,6 @@ class _ServicesState extends State<Services> {
                                 setState(() {
                                   isButtonPressed4 = !isButtonPressed4;
                                 });
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Bank()));
                               },
                             ),
                           ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:vendors/salon/Managequeue.dart';
+import 'package:vendors/salon/manage.dart';
 
 class YourRating extends StatefulWidget {
   @override
@@ -16,7 +18,10 @@ class _YourRatingState extends State<YourRating> {
         elevation: 0.0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => ManageQueue()));
+          },
           color: Colors.black,
         ),
       ),
@@ -157,7 +162,7 @@ class _YourRatingState extends State<YourRating> {
                     padding: const EdgeInsets.only(top: 200),
                     child: Text(
                         "Disclaimer : Your ratings are based on customer\n                              feedback."),
-                  )
+                  ),
                 ],
               ),
             ),

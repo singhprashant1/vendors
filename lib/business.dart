@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vendors/services.dart';
 import 'package:vendors/varification.dart';
@@ -8,7 +9,20 @@ class Business extends StatefulWidget {
 }
 
 class _BusinessState extends State<Business> {
-  String _name, _add, _email, _website, _number;
+  String _name, _add, _email, number, _website;
+  String uid = '';
+  @override
+  void initState() {
+    uid = '';
+    FirebaseAuth.instance.currentUser().then((val) {
+      setState(() {
+        this.uid = val.uid;
+      });
+    }).catchError((e) {
+      print(e);
+    });
+    super.initState();
+  }
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -40,7 +54,7 @@ class _BusinessState extends State<Business> {
             Align(
               alignment: Alignment.topLeft,
               child: Text(
-                "  Add Your Business",
+                "  Add Your Business ",
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 25,
@@ -112,7 +126,7 @@ class _BusinessState extends State<Business> {
                             labelStyle: TextStyle(color: Colors.black)),
                         keyboardType: TextInputType.number,
                         onSaved: (input) {
-                          _number = input;
+                          number = input;
                         },
                       ),
                       SizedBox(

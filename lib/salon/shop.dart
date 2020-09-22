@@ -7,21 +7,20 @@ import 'package:vendors/salon/clinic.dart';
 import 'package:vendors/salon/gymlist.dart';
 import 'package:vendors/salon/other.dart';
 import 'package:vendors/salon/restaurants.dart';
-import 'package:vendors/salon/shop.dart';
 
-class Services extends StatefulWidget {
+class Shop extends StatefulWidget {
   @override
-  _ServicesState createState() => _ServicesState();
+  _ShopState createState() => _ShopState();
 }
 
-class _ServicesState extends State<Services> {
-  bool isButtonPressed = true;
+class _ShopState extends State<Shop> {
+  bool isButtonPressed = false;
   bool isButtonPressed1 = false;
   bool isButtonPressed2 = false;
   bool isButtonPressed3 = false;
   bool isButtonPressed4 = false;
   bool isButtonPressed5 = false;
-  bool isButtonPressed6 = false;
+  bool isButtonPressed6 = true;
   bool isButtonPressed7 = false;
 
   @override
@@ -76,7 +75,7 @@ class _ServicesState extends State<Services> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Services()));
+                                    builder: (context) => Shop()));
                           },
                         ),
                       ),
@@ -221,10 +220,6 @@ class _ServicesState extends State<Services> {
                                 setState(() {
                                   isButtonPressed6 = !isButtonPressed6;
                                 });
-                                Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Shop()));
                               },
                             ),
                           ),

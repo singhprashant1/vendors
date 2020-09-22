@@ -3,21 +3,21 @@ import 'package:vendors/business.dart';
 import 'package:vendors/regdone.dart';
 import 'package:vendors/salon/Retails.dart';
 import 'package:vendors/salon/bank.dart';
-import 'package:vendors/salon/clinic.dart';
 import 'package:vendors/salon/gymlist.dart';
 import 'package:vendors/salon/other.dart';
 import 'package:vendors/salon/restaurants.dart';
 import 'package:vendors/salon/shop.dart';
+import 'package:vendors/services.dart';
 
-class Services extends StatefulWidget {
+class Clinic extends StatefulWidget {
   @override
-  _ServicesState createState() => _ServicesState();
+  _ClinicState createState() => _ClinicState();
 }
 
-class _ServicesState extends State<Services> {
-  bool isButtonPressed = true;
+class _ClinicState extends State<Clinic> {
+  bool isButtonPressed = false;
   bool isButtonPressed1 = false;
-  bool isButtonPressed2 = false;
+  bool isButtonPressed2 = true;
   bool isButtonPressed3 = false;
   bool isButtonPressed4 = false;
   bool isButtonPressed5 = false;

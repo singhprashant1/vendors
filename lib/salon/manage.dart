@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:vendors/salon/notification.dart';
 import 'package:vendors/salon/rating.dart';
 import 'package:vendors/salon/token.dart';
 import 'package:vendors/services.dart';
@@ -332,7 +333,12 @@ class _AppbarState extends State<Appbar> {
                       height: 5,
                     ),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NotiFication()));
+                      },
                       child: Text(
                         "Notifications",
                         style: TextStyle(fontSize: 23),
